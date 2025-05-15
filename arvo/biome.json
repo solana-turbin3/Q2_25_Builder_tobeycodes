@@ -1,0 +1,86 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "files": {
+    "ignore": [
+      "node_modules",
+      ".turbo",
+      ".next",
+      "storybook-static",
+      "coverage",
+      ".anchor",
+      "target",
+      "test-ledger",
+      "next-env.d.ts",
+      "tsconfig.tsbuildinfo",
+      "pnpm-lock.yaml",
+      "app.css"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "useEditorconfig": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "all": true,
+      "correctness": {
+        "noUndeclaredDependencies": "off",
+        "useImportExtensions": "off"
+      },
+      "suspicious": {
+        "noReactSpecificProps": "off"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "error",
+          "fix": "safe",
+          "options": {
+            "attributes": ["className"],
+            "functions": ["twMerge", "tv"]
+          }
+        }
+      }
+    }
+  },
+  "overrides": [
+    {
+      "include": ["*.config.*", "config.ts", "apps/app/src/app/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": ["apps/docs/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off",
+            "noNamespaceImport": "off"
+          },
+          "correctness": {
+            "noNodejsModules": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": ["packages/program/**", "apps/admin/**"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noConsole": "off",
+            "noConsoleLog": "off"
+          },
+          "correctness": {
+            "noNodejsModules": "off"
+          }
+        }
+      }
+    }
+  ]
+}

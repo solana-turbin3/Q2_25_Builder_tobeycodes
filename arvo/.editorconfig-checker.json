@@ -1,0 +1,29 @@
+{
+  "AllowedContentTypes": [],
+  "Debug": false,
+  "Disable": {
+    "EndOfLine": false,
+    "Indentation": false,
+    "IndentSize": false,
+    "InsertFinalNewline": false,
+    "MaxLineLength": false,
+    "TrimTrailingWhitespace": false
+  },
+  "Exclude": [
+    "README.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "component.hbs",
+    "story.hbs",
+    "Cargo.lock",
+    "\\.tsx$",
+    "\\.json$"
+  ],
+  "Format": "",
+  "IgnoreDefaults": false,
+  "NoColor": false,
+  "PassedFiles": [],
+  "SpacesAfterTabs": false,
+  "Verbose": false,
+  "Version": "v3.3.0"
+}
